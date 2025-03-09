@@ -1,54 +1,76 @@
-# React + TypeScript + Vite
+# Ecom Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is an eCommerce store built using React, TypeScript, and Vite. The store allows users to browse products, view individual product details, add products to a cart, and proceed to checkout. The project also includes a contact page with form validation.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Homepage**: Displays a list of products with a search bar for filtering products by name.
+- **Individual Product Page**: Shows detailed information about a single product, including title, description, image, price, and reviews. Users can add the product to the cart.
+- **Cart Page**: Lists all products added to the cart with the total price. Users can update the quantity or remove products from the cart.
+- **Checkout Success Page**: Displays a success message after a successful checkout and clears the cart.
+- **Contact Page**: Contains a contact form with validation for full name, subject, email, and message body.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- TypeScript
+- Vite
+- React Router
+- Tailwind CSS
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+$ git clone https://github.com/Hallotre/ecom-store-ca.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Navigate to the project directory:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+$ cd ecom-store
 ```
+
+3. Install dependencies:
+
+```bash
+$ npm install
+```
+
+### Running the Application
+
+To start the development server, run:
+
+```bash
+$ npm run dev
+```
+
+### Building for Production
+
+To build the application for production, run:
+
+```bash
+$ npm run build
+```
+
+The production-ready files will be in the `dist` directory.
+
+### Linting
+
+To lint the code, run:
+
+```bash
+$ npm run lint
+```
+
+## License
+
+This project is licensed under the MIT License.
